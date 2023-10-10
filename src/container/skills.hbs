@@ -4,37 +4,31 @@
 --}}
 
 <div>
-    {{#with main}}
+  {{#with main}}
     <main>
-        
         <section>
-            <div>
-                <h2>{{>title data=summary.title}}</h2>
-            </div>
-            <div>
-                <p>
-                    {{summary.text}}
-                </p>
-            </div>
-        </section>
-        
+        {{title data="All skills"}}
+        <ul>
+            {{#each skills}}
+            <li>
+                {{name}}
+                {{#if  point includeZero=true}} ({{point}}) {{/if}}
 
-       {{#with experience}}
-        <section>
-            <div>
-                <h2>{{title}}</h2>
-            </div>
-            <div>
-                <p>
-                    {{text}} 
-                </p>
-            </div>
-        </section>
-        {{/with}}
+                {{#if isTop}} (TOP) {{/if}}
+                {{#unless point includeZer0=true}} (не вивчаємо) {{/unless}}
+
+                {{#unless point}}
+                {{#if point includeZero=true}}
+                (зараз вивчаємо)
+                {{/if}}
+                {{/unless}}
+            </li>
+            {{/each}}
+        </ul>
+       </section>
     </main>
     {{/with}}
-   </div>
-
+</div>
 
        {{!--} <a href="{{social.email.href}}">{{social.email.text}}</a> /
         <a href="{{social.phone.href}}">{{social.phone.text}}</a> /
