@@ -269,7 +269,7 @@ router.get('/person', function (req, res) {
       },
       education: [
         {
-          degree: 'Bachelor of Science',
+          degree: 'Bachelor of Science+',
           major: 'Computer Science',
           university:
             'Massachusetts Institute of Technology',
