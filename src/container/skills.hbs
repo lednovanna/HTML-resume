@@ -15,7 +15,7 @@
                 {{#if  point includeZero=true}} ({{point}}) {{/if}}
 
                 {{#if isTop}} (TOP) {{/if}}
-                {{#unless point includeZer0=true}} (не вивчаємо) {{/unless}}
+                {{#unless point includeZer0=true}} (не вивчаємо){{/unless}}
 
                 {{#unless point}}
                 {{#if point includeZero=true}}
@@ -26,6 +26,18 @@
             {{/each}}
         </ul>
        </section>
+
+   <section>
+    {{> title data="All hobbies"}}
+    <ul>
+        {{#each hobbies}}
+        <li>
+            {{name}}
+            {{#if isMain}} (favourite) {{/if}}
+        </li>
+        {{/each}}
+    </ul>
+   </section>
     </main>
     {{/with}}
 </div>
