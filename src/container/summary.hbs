@@ -9,7 +9,7 @@
         
         <section>
             <div>
-                <h2>{{>title data=summary.title}}</h2>
+                <h2>{{>title data=summary.title big=true}}</h2>
             </div>
             <div>
                 <p>
@@ -21,9 +21,7 @@
 
        {{#with experience}}
         <section>
-            <div>
-                <h2>{{title}}</h2>
-            </div>
+            {{> title data=title}}
             <div>
                 <p>
                     {{text}} 
