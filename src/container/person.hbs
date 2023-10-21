@@ -1,19 +1,45 @@
 <div>
     {{#with person}}
-    <div>
+    
         <h1>{{name}}</h1>
-         <p>{{age}}</p>
+         <p>{{age}} years old</p>
     <p>{{gender}}</p>
     <br>
+    <p><h3>Address</h3></p>
     {{#with address}}
      <p>{{street}}</p>
          <p>{{city}}
          {{state}}
          {{zip}}
          {{country}}
-{{/with}}
-
-    </div>
     {{/with}}
-</div>
+    
+ </div>
+<hr>
+<p><h2>Education</h2></p>
+{{#each education}}
+ 
+ {{degree}}
+ <div><em>{{major}}</em></div>
+ <div>{{univercity}}{{graduationYear}}</div>
+
+{{/each}}
+<br>
+<hr>
+<br>
+<p><h2>Work Experience</h2></p>
+{{#each workExperience}}
+
+    <h4>{{company}}</h4>
+    <div>{{title}} (from {{startDate}}to {{endDate}})</div>
+    <div>{{responsibilities}}</div>
+    <p>Founded in {{year_founded}}, {{industry}}</p>
+{{/each}}
+<br>
+<p><h4>Employees</h4></p>
+{{#each employees}}
+<div>{{name}}, {{position}}, {{department}}</div>
+
+{{/each}}
+{{/with}}
 
