@@ -10,18 +10,18 @@ var header = {
     lastname: 'Ivanov',
   },
   position: 'Junior Fullstack developer',
-  salary:  {
+  salary: {
     text: 'Salary:',
     sum: '600 $ в місяць',
   },
   address: 'Ukraine, Kyiv , 02152',
- }
+}
 
- var footer = {
+var footer = {
   social: {
     email: {
       text: 'dmytro@mail.com',
-      href: 'mailto:dmytro@mail.com'
+      href: 'mailto:dmytro@mail.com',
     },
 
     phone: {
@@ -30,10 +30,10 @@ var header = {
     },
     linkedin: {
       text: 'Linkedin',
-      href: 'https://www.linkedin.com/in/dmytro-test'
+      href: 'https://www.linkedin.com/in/dmytro-test',
     },
   },
- }
+}
 
 // ================================================================
 
@@ -57,28 +57,27 @@ router.get('/summary', function (req, res) {
     // ↙ сюди вводимо JSON дані
 
     page: {
-    title: 'Ivan Ivanov | Resume',
-  },
-
-   header,
-
-   main: {
-    summary: {
-      title: 'Summary',
-      text: `Open-minded for new technologies, with 1 years of experience in development. Whenever I start to
-      work on a new project I learn the domain and try to understand the idea of the project. Good team
-      player, every colleague is a friend to me.`
+      title: 'Ivan Ivanov | Resume',
     },
-    experience: {
-      title: 'Other experience',
-      text: `Pet project for parsing sport betting data from different platforms ( odds ) and sport statistics (
-        tournament position, goals etc), analyzing by simple mathematics models and preparing probability
-        for such events like: money line - first win / draw / second win, totals etc.`
-    }
-   },
 
-   footer
-    
+    header,
+
+    main: {
+      summary: {
+        title: 'Summary',
+        text: `Open-minded for new technologies, with 1 years of experience in development. Whenever I start to
+      work on a new project I learn the domain and try to understand the idea of the project. Good team
+      player, every colleague is a friend to me.`,
+      },
+      experience: {
+        title: 'Other experience',
+        text: `Pet project for parsing sport betting data from different platforms ( odds ) and sport statistics (
+        tournament position, goals etc), analyzing by simple mathematics models and preparing probability
+        for such events like: money line - first win / draw / second win, totals etc.`,
+      },
+    },
+
+    footer,
   })
 })
 
@@ -93,47 +92,48 @@ router.get('/skills', function (req, res) {
     // ↙ сюди вводимо JSON дані
 
     page: {
-    title: 'Ivan Ivanov | Skills',
-  },
+      title: 'Ivan Ivanov | Skills',
+    },
 
-  header,
+    header,
 
-  main: {
-    skills: [
-      {
-        name: 'HTML',
-        point: 10,
-        isTop: true,
-      },
-      {
-        name: 'Handlebars',
-        point: 8,
-        isTop: true,
-      },
-      {
-        name: 'Git & Terminal',
-        point: 6,
-        isTop: false,
-      },
-      {
-        name: 'React.js',
-        point: 0,
-      },
-    ],
+    main: {
+      skills: [
+        {
+          name: 'HTML',
+          point: 10,
+          isTop: true,
+        },
+        {
+          name: 'Handlebars',
+          point: 8,
+          isTop: true,
+        },
+        {
+          name: 'Git & Terminal',
+          point: 6,
+          isTop: false,
+        },
+        {
+          name: 'React.js',
+          point: 0,
+        },
+        {
+          name: 'PHP',
+          point: null,
+        },
+      ],
 
-    hobbies: [
-      { name:'Dancing', isMaine: true },
-       { name: 'Tennis', isMaine: true },
-       { name:'reading' , isMain: false },
-     ],
+      hobbies: [
+        { name: 'Dancing', isMaine: true },
+        { name: 'Tennis', isMaine: true },
+        { name: 'reading', isMain: false },
+      ],
+    },
 
-  },
-
-   footer,
-
-    })
+    footer,
   })
-
+})
 
 // ==============================================================================
 router.get('/work', function (req, res) {
@@ -144,77 +144,75 @@ router.get('/work', function (req, res) {
     layout: 'big',
 
     page: {
-    title: 'Ivan Ivanov | Work',
-  },
+      title: 'Ivan Ivanov | Work',
+    },
 
-  header,
+    header,
 
-    main:{
+    main: {
       work: [
         {
           position: 'Junior Fullstack Developer',
           company: {
-          name: 'it-brains',
-          url: 'htttp//it-brains.com.ua',
+            name: 'it-brains',
+            url: 'htttp//it-brains.com.ua',
           },
 
-        duration: {
-          from: '10.10.2023',
-          to: '22.03.2023'
+          duration: {
+            from: '10.10.2023',
+            to: '22.03.2023',
+          },
         },
-        }, 
-        
+
         {
           position: 'Junior Fullstack Developer',
-          company: { 
+          company: {
             name: 'CanShecode',
-          url:'https//canshecode.com.ua',
+            url: 'https//canshecode.com.ua',
           },
 
-        duration: {
-          from: '10.10.2023',
-          to: null,
+          duration: {
+            from: '10.10.2023',
+            to: null,
+          },
+
+          projectAmount: 3,
+
+          projects: [
+            {
+              name: 'Resume',
+              url: 'http//resume.com.ua',
+              about: 'інформація про проект',
+              stacks: [
+                {
+                  name: 'React.js',
+                },
+                {
+                  name: 'HTML/CSS',
+                },
+                {
+                  name: 'Node.js',
+                },
+              ],
+              awards: [
+                {
+                  name: 'Background verification...',
+                },
+                {
+                  name: 'Preparing SEO...',
+                },
+              ],
+              stackAmount: 2,
+              awardAmount: 2,
+            },
+          ],
         },
+      ],
+    },
 
-        projectAmount: 3,
-
-        projects: [
-          {
-            name: 'Resume',
-            url: 'http//resume.com.ua',
-            about: 'інформація про проект',
-            stacks: [
-              {
-                name: 'React.js',
-              },
-              {
-                name: 'HTML/CSS',
-              },
-              {
-                name: 'Node.js',
-              },
-            ],
-            awards: [
-              {
-                name: 'Background verification...',
-              },
-              {
-                name: 'Preparing SEO...',
-              },
-            ],
-            stackAmount: 2,
-            awardAmount: 2,
-          },
-        ],
-      },
-       ] ,
-},
-
-   footer,
-
-    })
+    footer,
+  })
 })
-
 
 //================================================================================================
 
@@ -224,28 +222,30 @@ router.get('/education', function (req, res) {
     // ↙ сюди вводимо JSON дані
 
     page: {
-    title: 'Ivan Ivanov | Education',
-  },
+      title: 'Ivan Ivanov | Education',
+    },
 
-  header,
+    header,
 
-    main:{
+    main: {
       education: [
-       { name:'Kyiv Polytechnic University', isEnd: true },
+        {
+          name: 'Kyiv Polytechnic University',
+          isEnd: true,
+        },
         { name: 'Computer Academy', isEnd: true },
-        { name:'CanSheCode Shool' , isEnd: false },
+        { name: 'CanSheCode Shool', isEnd: false },
       ],
 
       certificates: [
-        { name:'CanShecode HTML', id: 111111 },
+        { name: 'CanShecode HTML', id: 111111 },
         { name: 'CnaShecode JS', id: 22222 },
-        { name:'IT-Brains React' , id: 33333 },
-      ],   
-},
+        { name: 'IT-Brains React', id: 33333 },
+      ],
+    },
 
-   footer,
-
-    })
+    footer,
+  })
 })
 
 // ================================================================

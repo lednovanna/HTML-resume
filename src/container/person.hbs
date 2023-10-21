@@ -1,0 +1,19 @@
+<div>
+    {{#with person}}
+    <div>
+        <h1>{{name}}</h1>
+         <p>{{age}}</p>
+    <p>{{gender}}</p>
+    <br>
+    {{#with address}}
+     <p>{{street}}</p>
+         <p>{{city}}
+         {{state}}
+         {{zip}}
+         {{country}}
+{{/with}}
+
+    </div>
+    {{/with}}
+</div>
+
