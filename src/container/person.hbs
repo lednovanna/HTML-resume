@@ -15,8 +15,9 @@
     {{/with}}
     
  </div>
+ <br>
 <hr>
-<p><h2>Education</h2></p>
+<div><h2>Education</h2></div>
 {{#each education}}
  
  {{degree}}
@@ -27,19 +28,68 @@
 <br>
 <hr>
 <br>
-<p><h2>Work Experience</h2></p>
+<div><h2>Work Experience</h2></div>
 {{#each workExperience}}
 
     <h4>{{company}}</h4>
     <div>{{title}} (from {{startDate}}to {{endDate}})</div>
     <div>{{responsibilities}}</div>
-    <p>Founded in {{year_founded}}, {{industry}}</p>
-{{/each}}
+    <div>Founded in {{year_founded}}, {{industry}}</div>
 <br>
-<p><h4>Employees</h4></p>
+<div><h4>Employees:</h4></div>
 {{#each employees}}
 <div>{{name}}, {{position}}, {{department}}</div>
+{{#each projects}}
+<p>Проект  <strong>{{name}}</strong></p>
+<div>{{description}}</div>
+<div>Status: {{status}}</div>
+<br>
+{{#each teams}}
+<div>Над проектом працюють: {{team_name}} на чолі з <strong>{{team_leader.name}}.</strong></div>
+<p>email: {{team_leader.email}}</p>
+{{#each team_members}}
+<div><strong>Члени команди: {{team_members}} </strong>
+<p>{{name}}</p>
+<p>{{title}}</p>
+<p>email: {{email}}</p>
+<p><strong>Навички:</strong></p>
+ <ul>
+{{#each skills}}
+<li>{{this}}</li>
+{{/each}}
+</ul>
+<p><strong>Проекти:</strong></p>
+
+    {{#each projects}}
+    <strong>{{name}}</strong>
+    <p>{{description}}</p>
+     
+    <p><strong>Технології:</strong></p>
+    <ul>
+    {{#each technologies}}
+   <li>{{this}}</li>
+   {{/each}}
+   <br>
+   <div><strong>Члени команди:</strong> </div>
+   <ul>
+    {{#each team_members}}
+    <p><li>{{name}} - {{title}}</li></p>
+    
+    {{/each}}
+   </ul>
+    {{/each}} 
+</ul>
+</div>
+{{/each}}
 
 {{/each}}
+
+{{/each}}
+
+{{/each}}
+
+
+{{/each}}
+
 {{/with}}
 
