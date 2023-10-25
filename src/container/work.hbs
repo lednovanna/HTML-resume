@@ -17,6 +17,7 @@
                      (досі працюю)
                      {{/if}}
                         </div>
+              
                 <br>
 
                <div>
@@ -29,8 +30,10 @@
                <br>
                <br>
                <div>
+                
                 <strong> Projects({{projectAmount}})</strong>
                </div>
+               
                <br>
                <ul>
                 {{#each projects}}
@@ -52,6 +55,7 @@
                   </div>
 
                   <br>
+                  <div> <em>Awards</em></div>
                   <div>
                     <ul>
                         {{#each awards}}
@@ -60,12 +64,15 @@
                     </ul>
                   </div>
                 </li>
-               {{/each}}
+               {{/each}} 
             </ul>
             </li>
             {{/each}}
             </ul>
             </div>
+             <br>
+               <div><strong>Stack amount ({{stackAmount}})</strong></div>
+                <div><strong>Award Amount ({{awardAmount}})</strong></div>
             </section>
 </main>
 {{/with}}
