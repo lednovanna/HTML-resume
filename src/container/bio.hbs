@@ -1,0 +1,20 @@
+<div>
+    <p><h1>{{name}}</h1></p>
+    <p>Дата народження: <em>{{birthdate}}</em></p>
+    <p>Місце народження: <em> {{birthplace}}</em></p>
+    <p>Дата смерті: <em>{{deathdate}}</em></p>
+    <p>Місце смерті: <em>{{deathplace}}</em></p>
+    <p>Національність: <em>{{nationality}}</em></p>
+    <br>
+    <hr>
+    <br>
+   <div>
+    <h2>Досягнення</h2>
+    <ul></ul>
+    {{#each known_for}}
+    <li>{{this}}</li>
+     {{/each}}
+   </div>
+
+
+</div>
