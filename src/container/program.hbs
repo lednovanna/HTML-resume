@@ -19,8 +19,10 @@
           <p>Duration: <strong>{{duration}}</strong></p>
         
         <br>
-        {{#with details.museum}}
+        {{#with details}}
+        {{#with museum}}
         <p>Museum:<strong>{{name}}</strong> </p>
+       
         {{#with location}}
         <p>Address:<strong>{{address}}, {{city}} {{country}}</strong></p>
        {{/with}}
@@ -40,8 +42,10 @@
          </li>
         {{/each}}
         </ul>
+         {{/each}} 
         {{/with}}
-        
+
+       
         <br>
         <hr>
         <br>
@@ -51,7 +55,7 @@
         <p>Rating: {{rating}}</p>
         {{/with}}
     </div>
-    {{/each}} 
+    
     {{/with}}
-
+ {{/with}}
 </div>
