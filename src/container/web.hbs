@@ -19,20 +19,26 @@
 {{/each}}
 </ul>
 </div>
-{{/each}}
+
 <br>
 <div><p><strong><em>Name:</strong> {{name}}</em></p></div>
-
-{{#each properties}}
-<div>Name: <strong>{{name}}</strong></div>
 <div><em>{{description}}</em></div>
+<ul>
+    {{#each attributes}}
+    <li>{{name}}
+        {{description}}
+    </li>
+    {{/each}}
+</ul>
+{{/each}}
+</ul>
 {{#each values}}
 {{value}}
 {{description}}
-{{/each}}
-{{/each}}
-{{/each}}
 
+{{/each}}
+{{/each}}
+{{/each}}
 
 </ul>
 </div>
