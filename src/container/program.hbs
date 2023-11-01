@@ -4,45 +4,42 @@
     {{#with program}}
     {{#with excursion}}
     <h1>Excursion program</h1>
-    <p>Program name: <strong>{{name}}</strong></p>
+    <div>Program name: <strong>{{name}}</strong></div>
     {{#with location}}
-    <p>Location: <strong>{{city}}, {{country}}</strong></p>
+    <div>Location: <strong>{{city}}, {{country}}</strong></div>
     {{/with}}
-    <p>Date: <em>{{date}}</em></p>
+    <div>Date: <em>{{date}}</em></div>
     <br>
     <hr>
     <br>
     <div>
-        <h3>Tour program</h3>
+        <p><h3>Tour program</h3></p>
         {{#each program}}
-        <p>Name:<strong>{{name}}</strong> </p>
-         <p> Type:<strong> {{type}}</strong></p>
-          <p>Duration: <strong>{{duration}}</strong></p>
+        <div>Name:<strong>{{name}}</strong> </div>
+         <div> Type:<strong> {{type}}</strong></div>
+          <div>Duration: <strong>{{duration}}</strong></div>
         
         <br>
         {{#with details}}
         {{#with museum}}
-        <p>Museum:<strong>{{name}}</strong> </p>
+        <div>Museum:<strong>{{name}}</strong> </div>
        
          {{#with location}}
-        <p>Address:<strong>{{address}}, {{city}} {{country}}</strong></p>
+        <div>Address:<strong>{{address}}, {{city}} {{country}}</strong></div>
        {{/with}}
       
         <br>
-         <h4>Exhibits</h4>
+        <p> <h4>Exhibits</h4></p>
          <ul>
         {{#each exhibits}}
        <li>
-        <p><strong>{{name}}</strong></p>
+        <div><strong>{{name}}</strong></div>
         {{#if artist}}
-         <p>Artist: <strong>{{artist}}</strong></p>
-         <p><em>{{description}}</em></p>
-         <div>{{audio_guide}}</div>
+         <div>Artist: <strong>{{artist}}</strong></div>
          {{/if}}
-          {{#if artist}}
-         <p>Artist: <strong>{{artist}}</strong></p>
          <p><em>{{description}}</em></p>
-         <div>{{audio_guide}}</div>
+         <div>{{#if audio_guide}}</div>
+        <div>Audio Guide</div>
          {{/if}}
          </li>
         {{/each}}
@@ -52,21 +49,48 @@
     
         
         <br>
+        <div>
         {{#with guide}}
-        <div><h2>Guide</h2></div>
-        <p><strong>{{name}}</strong></p>
-        <p>Language:<strong> {{language}}</strong></p>
-        <p>Rating: {{rating}}</p>
+       <p> <h4>Guide</h4></p>
+        <div>Name: <strong>{{name}}</strong></div>
+        <div>Language:<strong> {{language}}</strong></div>
+        <div>Rating: {{rating}}</div>
         {{/with}}
     </div>
+
         {{/with}}
-        {{/with}}
+        </div>
       
       <br>
+     <hr>
+   <div>Name: <strong>{{name}}</strong></div> 
+   <div>Type: <strong>{{type}}</strong></div>
+   <div>Duration: <strong>{{duration}},</strong></div>
+   <br>
+   <p><h4>Details</h4></p>
+   {{#with details}}
+   {{#with venue}}
+   <div>Name: <strong>{{name}}</strong></div>
+   {{#with location}}
+   <div>Address: <strong>{{address}}, {{city}}, {{country}} </strong></div>
+   {{/with}}
 
-   <p>Name: {{Name}}</p> 
-   <div>{{type}}</div>
-   <div>{{duration}}</div>
+ {{/with}}
+ <p><h4>Performers:</h4></p>
+ <ul>
+ {{#each performers}}
+<div><li>name: <strong>{{name}}</strong>
+    <div>type: <strong>{{type}}</strong></div>
+</li></div>
+ {{/each}}
+ </ul>
+ <p><h4>Guide:</h4></p>
+ {{#with guide}}
+ <div>Name: <strong>{{name}}</strong>,</div>
+ <div>Language: <strong>{{language}}</strong>,</div>
+ <div>Rating: <strong>{{rating}}</strong></div>
+ {{/with}}
+ {{/with}}
  
       {{/each}}
       {{/with}}
