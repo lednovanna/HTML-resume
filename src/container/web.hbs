@@ -1,8 +1,8 @@
 {{#with web}}
 <div>
     <ul>
+ <p><h3>Languages</h3></p>       
 {{#each languages}}
-<p><h3>Languages</h3></p>
 <li><p><strong>Name: <strong>{{name}}</strong></strong></p>
 <p>Version: {{version}}</p>
 <p>{{description}}</p></li>
@@ -11,29 +11,66 @@
 <div><strong><em>Name:</strong> {{name}}</em></p>
 <div>{{description}}</div>
 <ul>
+    <p><h3>Attributes</h3></p>
     {{#each attributes}}
-<p><h3>Attributes</h3></p>
+
 <li><p>Name: <strong> {{name}}</strong></p>
 <div>{{description}}</div></li>
 
 {{/each}}
 </ul>
 </div>
-{{/each}}
+
 <br>
 <div><p><strong><em>Name:</strong> {{name}}</em></p></div>
-
-{{#each properties}}
-<div>Name: <strong>{{name}}</strong></div>
 <div><em>{{description}}</em></div>
-{{#each values}}
-{{value}}
-{{description}}
-{{/each}}
-{{/each}}
-{{/each}}
+<ul>
+    <p><h3>Attributes</h3></p>
+    {{#each attributes}}
+    <li>Name: {{name}}
+        {{description}}</li>
+    {{/each}}
+</ul>
 
 
+{{/each}}
+<ul>
+<h3>Properties</h3>
+{{#each properties}}
+<li>Name: <strong>{{name}}</strong>
+  <div><em>{{description}}</em></div></li>
+  <ul>
+   <h4>Values</h4> 
+  {{#each values}}
+<li>Value: {{value}}
+<div>Description: {{description}}</div></li>
+{{/each}}
+
+</ul>
+<br>
+
+{{/each}}
+</ul>
+<ul>
+<h3>Functions </h3>
+{{#each functions}}
+<li>Name:<strong> {{name}}</strong>
+    <div>Description:<strong> {{description}}</strong></div>
+</li>
+<ul>
+<div><em>Parameters</em></div>
+{{#each parameters}}
+<li>Name: <strong>{{name}}</strong>
+    <div>Type: <strong>{{type}}</strong></div>
+    <div> Description: <strong>{{description}}</strong></div>
+</li>
+{{/each}}
+</ul>
+{{/each}}
+</ul>
+{{/each}}
+
+</ul>
 </ul>
 </div>
 {{/with}}
