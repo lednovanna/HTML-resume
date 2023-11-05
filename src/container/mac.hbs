@@ -1,0 +1,79 @@
+<h2>{{name}}</h2>
+<div>{{description}}</div>
+<div>price: <strong>{{price}}</strong></div>
+<div>categry: <strong>{{category}}</strong></div>
+<br>
+<hr>
+<p><h3>Features</h3></p>
+{{#with features}}
+<div><strong>Processor:</strong></div>
+{{#with processor}}
+<div>brand: <strong>{{brand}},</strong></div>
+<div>model: <strong>{{model}},</strong></div>
+<div>speed: <strong>{{speed}},</strong></div>
+<div>cores: <strong>{{cores}},</strong></div>
+<div>cache: <strong>{{cache}},</strong></div>
+{{/with}}
+<p><strong>Memory:</strong></p>
+{{#with memory}}
+<div>type: <strong>{{type}},</strong></div>
+<div>size: <strong>{{size}},</strong></div>
+<div>speed: <strong>{{speed}},</strong></div>
+{{/with}}
+<p><strong>Storage:</strong></p>
+{{#with storage}}
+<div>type: <strong>{{type}},</strong></div>
+<div>size: <strong>{{size}},</strong></div>
+{{/with}}
+<p><strong>Display:</strong></p>
+{{#with display}}
+<div>size: <strong>{{size}},</strong></div>
+<div>resolution: <strong>{{resolution}},</strong></div>
+<div>technology: <strong>{{technoligy}},</strong></div>
+<div>color space: <strong>{{color_space}},</strong></div>
+<div>brightness: <strong>{{brightness}},</strong></div>
+<div>refresh rate: <strong>{{refresh_rate}},</strong></div>
+{{/with}}
+<p><strong>Graphics</strong></p>
+{{#with graphics}}
+<div>brand: <strong>{{brand}},</strong></div>
+<div>model: <strong>{{model}},</strong></div>
+<div>memory: <strong>{{memory}},</strong></div>
+{{/with}}
+<p><strong>Ports:</strong></p>
+{{#each ports}}
+<div>type: <strong>{{type}},</strong></div>
+<div>count: <strong>{{count}},</strong></div>
+<p><strong>Features:</strong></p>
+<ul></ul>
+{{#each features}}
+<li>{{this}}</li>
+{{/each}}
+</ul>
+<div>type: <strong>{{type}},</strong></div>
+<div>count: <strong>{{count}},</strong></div>
+{{/each}}
+<p><strong>Battery:</strong></p>
+{{#with battery}}
+<div>type: <strong>{{type}},</strong></div>
+<div>capacity: <strong>{{capacity}},</strong></div>
+<div>life: <strong>{{life}},</strong></div>
+{{/with}}
+<div>weight: <strong>{{weight}},</strong></div>
+<p><strong>Dimensions:</strong></p>
+{{#with dimensions}}
+<div>height: <strong>{{height}},</strong></div>
+<div>width: <strong>{{width}},</strong></div>
+<div>depth: <strong>{{depth}},</strong></div>
+{{/with}}
+<p><strong>Operating system</strong></p>
+<ul></ul>
+<p><strong>Axxessories</strong></p>
+{{#each accessories}}
+<li>name: <strong>{{name}},</strong>
+<div>price: <strong>{{price}}</strong></div>
+</li>
+{{/each}}
+
+</ul>
+{{/with}}
