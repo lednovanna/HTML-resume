@@ -1,0 +1,122 @@
+<div>
+    <p><h1>{{name}}</h1></p>
+    <p>Дата народження: <em>{{birthdate}}</em></p>
+    <p>Місце народження: <em> {{birthplace}}</em></p>
+    <p>Дата смерті: <em>{{deathdate}}</em></p>
+    <p>Місце смерті: <em>{{deathplace}}</em></p>
+    <p>Національність: <em>{{nationality}}</em></p>
+    <br>
+    <hr>
+    <br>
+   <div>
+    <h3>Досягнення</h3>
+    <ul>
+    {{#each known_for}}
+    <li>{{this}}</li>
+     {{/each}}
+     </ul>
+   </div>
+   <br>
+   <div>
+    <h3>Освіта</h3>
+    {{#each education}}
+    <p>Ступінь - <em>{{degree}},</em> напрямок - <em>{{field}}</em></p>
+    <p>Навчальний заклад {{institution}}, {{year}} </p>
+    {{/each}}
+   </div>
+   <br>
+   <hr>
+   <br>
+   <div>
+    <h3>Публікації</h3>
+    <ul>
+        {{#each notable_publications}}
+        <li><strong>{{title}}</strong>, {{year}}
+            <p>{{publisher}}</p> </li>
+
+        {{/each}}
+    </ul>
+   </div>
+   <br>
+   <hr>
+   <br>
+   <div>
+    <h3>Сімейне життя</h3>
+    <ul>
+        {{#each partners}}
+        <li><strong>{{name}}.</strong> {{relationship}}
+        <p>{{years}}</p></li>
+        {{/each}}
+    </ul>
+   </div>
+   <br>
+   <hr>
+   <br>
+   <div>
+   <h3>Нагороди</h3>
+   
+   {{#each awards}}
+    <p><strong>{{title}}.</strong> {{years}}</p>
+    <p>{{description}}</p>
+   {{/each}}
+   
+</div>
+<br>
+<hr>
+<br>
+<div>
+    <h3>Вчені, які мали вплив на роботу А.Енштейна</h3>
+    <ul>
+        {{#each influences}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</div>
+<br>
+<hr>
+<br>
+<div>
+    <h3>Вчені,  на яких вплинули роботи А.Енштейна</h3>
+    <ul>
+        {{#each influenced}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</div>
+<br>
+<hr>
+<br>
+<div>
+    <h3>Цитати</h3>
+    <ul>
+        {{#each quotes}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</div>
+<br>
+<hr>
+<br>
+<div>
+    <h3>Визначні відкриття</h3>
+    
+        {{#each major_discoveries}}
+        <p><strong>{{title}}</strong> {{year}}</p>
+        <p>{{description}}</p>
+        {{/each}}
+    
+</div>
+<br>
+<hr>
+<br>
+<div>
+    <h3>Внесок у розвиток науки</h3>
+    {{#with contributions}}
+    <p><strong>{{title}}</strong></p>
+    <p>{{description}}</p>
+    <P>{{year}}, {{field}}</P>
+    {{/with}}
+</div>
+
+
+</div>
