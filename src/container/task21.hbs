@@ -1,0 +1,96 @@
+<br>
+{{#with heading}}
+<div class="card">
+    <div class="card-body">
+{{#with main}}
+<h1 class="display-1">{{title}}</h1>
+<P>{{text}}</p>
+{{#with button_text}}
+<div><button class="btn  btn-primary">{{solid}}</button></div>
+<br>
+<div><button class="btn  btn-outline-primary">{{outline}}</button></div>
+{{/with}}
+{{/with}}
+</div>
+</div>
+<br>
+<div class="card">
+    <div class="card-body">
+{{#with second}}
+<h2 class="display-2">{{title}}</h2>
+<P>{{text}}</p>
+{{#with button_text}}
+<div><button class="btn  btn-secondary">{{solid}}</button></div>
+<br>
+<div><button class="btn  btn-outline-secondary">{{outline}}</button></div>
+{{/with}}
+{{/with}}
+</div>
+</div>
+<br>
+<div class="card">
+    <div class="card-body">
+{{#with subblock}}
+<h3 class="display-3">{{title}}</h3>
+<P>{{text}}</p>
+{{#with button_text}}
+<div><button class="btn  btn-dark">{{solid}}</button></div>
+<br>
+<div><button class="btn  btn-outline-dark">{{outline}}</button></div>
+{{/with}}
+{{/with}}
+</div>
+</div>
+{{/with}}
+<br>
+<div class="card">
+<div class="card-body">
+{{#with nested_display}}
+<h1 class="display-1">{{title}}</h1>
+<div class="card">
+    <div class="card-body">
+{{#with children_display}}
+<p class="display-3"> {{title}}</p>,
+<div class="text-muted">{{text}}</div>
+{{#with button}}
+<div><button class="btn btn-outline-warning">{{text}}</button></div>
+{{/with}}
+{{/with}}
+</div>
+</div>
+
+<br>
+<div class="display-4">{{header_text}}</div>
+<br>
+{{#with button}}
+<div><button class="btn btn-info">{{text}}</button></div>
+{{/with}}
+{{/with}}
+</div>
+</div>
+<br>
+<div class="card">
+    <div class="card-body">
+        {{#with paragraph}}
+        <div class="display-5">{{title}}</div>
+        <div class="text-secondary">{{text}}</div>
+        {{#with button}}
+        <a href="{{url}}"  class="btn btn-link">{{text}}</a>
+        {{/with}}
+
+    <br>
+    <div class="card">
+    <div class="card-body">
+     <ul> 
+    {{#each list_name}}
+     <li> <a href="{{url}}"  class="btn btn-link">{{text}}</a></li>
+    {{/each}}
+     </ul>
+   
+    </div>
+    </div>
+    <br>
+        {{/with}}
+    </div>
+</div>
+<br>
