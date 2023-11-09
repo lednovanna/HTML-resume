@@ -1,9 +1,7 @@
-// Підключаємо технологію express для back-end сервера
 const express = require('express')
-// Cтворюємо роутер - місце, куди ми підключаємо ендпоїнти
+
 const router = express.Router()
 
-//===============================================================
 var header = {
   name: {
     firstname: 'Ivan',
@@ -35,27 +33,12 @@ var footer = {
   },
 }
 
-// ================================================================
-
-// router.get Створює нам один ентпоїнт
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
-// ================================================================
-
-//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/summary', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('summary', {
-    // ↙ сюди вводимо JSON дані
-
     page: {
       title: 'Ivan Ivanov | Resume',
     },
@@ -81,16 +64,8 @@ router.get('/summary', function (req, res) {
   })
 })
 
-// ================================================================
-
-// ================================================================
-
-//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/skills', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('skills', {
-    // ↙ сюди вводимо JSON дані
-
     page: {
       title: 'Ivan Ivanov | Skills',
     },
@@ -135,12 +110,8 @@ router.get('/skills', function (req, res) {
   })
 })
 
-// ==============================================================================
 router.get('/work', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('work', {
-    // ↙ сюди вводимо JSON дані
-
     layout: 'big',
 
     page: {
@@ -213,13 +184,8 @@ router.get('/work', function (req, res) {
   })
 })
 
-//================================================================================================
-
 router.get('/education', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('education', {
-    // ↙ сюди вводимо JSON дані
-
     page: {
       title: 'Ivan Ivanov | Education',
     },
@@ -247,11 +213,7 @@ router.get('/education', function (req, res) {
   })
 })
 
-// ================================================================
-
-//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/person', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
     layout: 'person',
 
@@ -349,12 +311,7 @@ router.get('/person', function (req, res) {
   })
 })
 
-// ================================================================
-// ================================================================
-
-//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/bio', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('bio', {
     layout: 'bio',
 
@@ -449,9 +406,7 @@ router.get('/bio', function (req, res) {
   })
 })
 
-// ================================================================
 router.get('/program', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
     layout: 'program',
     program: {
@@ -534,9 +489,7 @@ router.get('/program', function (req, res) {
   })
 })
 
-// ================================================================
 router.get('/web', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
     layout: 'web',
     web: {
@@ -662,11 +615,8 @@ router.get('/web', function (req, res) {
     },
   })
 })
-//================================================================
-router.get('/car', function (req, res) {
-  // res.render генерує нам HTML сторінку
 
-  //            ↙ cюди вводимо назву файлу з сontainer
+router.get('/car', function (req, res) {
   res.render('car', {
     layout: 'car',
 
@@ -759,18 +709,9 @@ router.get('/car', function (req, res) {
       total: 28990,
     },
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
-// ================================================================
-
-// ================================================================
-// router.get Створює нам один ентпоїнт
-
 router.get('/facebook', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('facebook', {
     layout: 'facebook',
 
@@ -922,16 +863,9 @@ router.get('/facebook', function (req, res) {
       },
     ],
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
-// ================================================================
-// ================================================================
-
 router.get('/js', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('js', {
     layout: 'js',
 
@@ -1005,16 +939,9 @@ router.get('/js', function (req, res) {
       },
     ],
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
-// ================================================================
-// router.get Створює нам один ентпоїнт
-
 router.get('/mac', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('mac', {
     layout: 'mac',
 
@@ -1096,17 +1023,9 @@ router.get('/mac', function (req, res) {
       ],
     },
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
-// ================================================================
-// router.get Створює нам один ентпоїнт
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/task22', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task22', {
     layout: 'basic',
 
@@ -1159,18 +1078,14 @@ router.get('/task22', function (req, res) {
       },
     },
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
-// ================================================================
-// Підключаємо роутер до бек-енду
 module.exports = router
-// Підключаємо технологію express для back-end сервера
+
 const express = require('express')
-// Cтворюємо роутер - місце, куди ми підключаємо ендпоїнти
+
 const router = express.Router()
 
-//===============================================================
 var header = {
   name: {
     firstname: 'Ivan',
@@ -1202,27 +1117,12 @@ var footer = {
   },
 }
 
-// ================================================================
-
-// router.get Створює нам один ентпоїнт
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
-// ================================================================
-
-//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/summary', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('summary', {
-    // ↙ сюди вводимо JSON дані
-
     page: {
       title: 'Ivan Ivanov | Resume',
     },
@@ -1248,16 +1148,8 @@ router.get('/summary', function (req, res) {
   })
 })
 
-// ================================================================
-
-// ================================================================
-
-//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/skills', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('skills', {
-    // ↙ сюди вводимо JSON дані
-
     page: {
       title: 'Ivan Ivanov | Skills',
     },
@@ -1302,12 +1194,8 @@ router.get('/skills', function (req, res) {
   })
 })
 
-// ==============================================================================
 router.get('/work', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('work', {
-    // ↙ сюди вводимо JSON дані
-
     layout: 'big',
 
     page: {
@@ -1380,13 +1268,8 @@ router.get('/work', function (req, res) {
   })
 })
 
-//================================================================================================
-
 router.get('/education', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('education', {
-    // ↙ сюди вводимо JSON дані
-
     page: {
       title: 'Ivan Ivanov | Education',
     },
@@ -1414,11 +1297,7 @@ router.get('/education', function (req, res) {
   })
 })
 
-// ================================================================
-
-//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/person', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
     layout: 'person',
 
@@ -1516,12 +1395,7 @@ router.get('/person', function (req, res) {
   })
 })
 
-// ================================================================
-// ================================================================
-
-//              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/bio', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('bio', {
     layout: 'bio',
 
@@ -1616,9 +1490,7 @@ router.get('/bio', function (req, res) {
   })
 })
 
-// ================================================================
 router.get('/program', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
     layout: 'program',
     program: {
@@ -1701,9 +1573,7 @@ router.get('/program', function (req, res) {
   })
 })
 
-// ================================================================
 router.get('/web', function (req, res) {
-  //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
     layout: 'web',
     web: {
@@ -1829,11 +1699,8 @@ router.get('/web', function (req, res) {
     },
   })
 })
-//================================================================
-router.get('/car', function (req, res) {
-  // res.render генерує нам HTML сторінку
 
-  //            ↙ cюди вводимо назву файлу з сontainer
+router.get('/car', function (req, res) {
   res.render('car', {
     layout: 'car',
 
@@ -1926,18 +1793,9 @@ router.get('/car', function (req, res) {
       total: 28990,
     },
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
-// ================================================================
-
-// ================================================================
-// router.get Створює нам один ентпоїнт
-
 router.get('/facebook', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('facebook', {
     layout: 'facebook',
 
@@ -2089,16 +1947,9 @@ router.get('/facebook', function (req, res) {
       },
     ],
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
-// ================================================================
-// ================================================================
-
 router.get('/js', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('js', {
     layout: 'js',
 
@@ -2172,16 +2023,9 @@ router.get('/js', function (req, res) {
       },
     ],
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
-// ================================================================
-// router.get Створює нам один ентпоїнт
-
 router.get('/mac', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('mac', {
     layout: 'mac',
 
@@ -2263,25 +2107,15 @@ router.get('/mac', function (req, res) {
       ],
     },
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
-// ================================================================
 router.get('/bootstrap', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('bootstrap', {
     layout: 'bootstrap',
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
-// ================================================================
 router.get('/task21', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task21', {
     layout: 'basic',
 
@@ -2345,10 +2179,59 @@ router.get('/task21', function (req, res) {
       ],
     },
   })
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
-// ================================================================
+router.get('/task22', function (req, res) {
+  res.render('task22', {
+    page_header: {
+      title: 'InnovaMind',
+      description: 'Welcome to our wonderful community',
+    },
+    section: {
+      about_us: {
+        title_list: {
+          main: 'InnovaMind',
+          sub: 'InnovaMind is a forward-thinking startup focused on innovation. We are dedicated to creating efficient and powerful software through the use of first-class functions.',
+        },
+        button: { text: 'Show more' },
+      },
+      advantage: {
+        title: 'Advantage',
+        efficiency: {
+          title: 'Efficiency',
+          sub_title: 'Streamline your software development',
+          description:
+            'Streamline your software development with our innovative platform...',
+          button: 'Show more',
+        },
+        innovation: {
+          title: 'Innovation',
+          sub_title:
+            'Forward-thinking approach to programming',
+          description:
+            ' Stay ahead of the curve with our forward-thinking approach to programming...',
+          button: 'Show more',
+        },
+        collaboration: {
+          title: 'Collaboration',
+          sub_title: 'Connect with like-minded developers',
+          description:
+            'Connect with a community of like-minded developers to share knowledge and insights...',
+          button: 'Show more',
+        },
+      },
+      agreement: {
+        title: 'Terms of use',
+        info: {
+          sub_title: 'Check out our requirements',
+          detail: {
+            text: 'By using or accessing the service, you agree to be bound by the terms and conditions outlined in the agreement.',
+            button: 'Аccept',
+          },
+        },
+      },
+    },
+  })
+})
 
-// Підключаємо роутер до бек-енду
 module.exports = router
