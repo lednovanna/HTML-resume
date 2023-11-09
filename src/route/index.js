@@ -615,7 +615,6 @@ router.get('/web', function (req, res) {
     },
   })
 })
-
 router.get('/car', function (req, res) {
   res.render('car', {
     layout: 'car',
@@ -1081,9 +1080,7 @@ router.get('/task22', function (req, res) {
 })
 
 module.exports = router
-
 const express = require('express')
-
 const router = express.Router()
 
 var header = {
@@ -1699,7 +1696,6 @@ router.get('/web', function (req, res) {
     },
   })
 })
-
 router.get('/car', function (req, res) {
   res.render('car', {
     layout: 'car',
