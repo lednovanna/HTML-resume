@@ -1,1 +1,83 @@
-hello
+<div>
+    {{#with page_header}}
+    <h1 class="text-center">{{title}}</h1>
+    <p class="text-center text-muted">{{description}}</p>
+    {{/with}}
+</div>
+<hr>
+<div>
+    {{#with section}}
+    {{#with about_us}}
+    {{#with title_list}}
+    <div class="text-end display-6">{{main}}</div>
+    <h2 class="text-end ">{{sub}}</h2>
+    {{/with}}
+    <br>
+    <button class="btn btn-outline-info">{{button.text}}</button>
+    {{/with}}
+    <br>
+    <br>
+    <div class="card">
+        
+    <div class="card-body">
+    
+    {{#with advantage}}
+    <p class="display-5">{{title}}</p>
+    <div class="card">
+    <div class="card-body">
+    {{#with efficiency}}
+    <div class="display-4">{{sub_title}},</div>
+    <p><h6>{{description}}</h6></p>
+    <br>
+    <button class="btn btn-outline-warning"> {{button}}</button>
+    {{/with}}
+    </div>
+    </div>
+    <br>
+    <div class="card">
+    <div class="card-body">
+    {{#with innovation}}
+     <p class="display-4">{{title}}</p>
+     <h6>{{sub_title}}</h6>
+     <p>{{description}}</p>
+     <button class="btn btn-outline-warning"> {{button}}</button>
+    {{/with}}
+    </div>
+    </div>
+    <br>
+    <div class="card">
+    <div class="card-body">
+    {{#with collaboration}}
+    <p class="display-4 text-end">{{title}}</p>
+    <h6 class="text-end">{{sub_title}}</h6>
+     <p class="text-end">{{description}}</p>
+     <button class="btn btn-outline-warning text-end"> {{button}}</button>
+    {{/with}}
+    </div>
+    </div>
+    {{/with}}
+     </div>
+    </div>
+    <br>
+    
+    {{#with agreement}}
+     <p class="display-5">{{title}}</p>
+      <div class="card">
+    <div class="card-body">
+        {{#with info}}
+        <h5 class="text-end">{{sub_title}}</h5>
+        <div class="card">
+    <div class="card-body">
+        {{#with detail}}
+        <p>{{text}}</p>
+        <button class="btn btn-success"> {{button}}</button>
+        {{/with}}
+        </div>
+        </div>
+        {{/with}}
+    {{/with}}
+        </div>
+        </div>
+    {{/with}}
+   
+</div>

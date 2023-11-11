@@ -1080,39 +1080,6 @@ router.get('/task22', function (req, res) {
 })
 
 module.exports = router
-const express = require('express')
-const router = express.Router()
-
-var header = {
-  name: {
-    firstname: 'Ivan',
-    lastname: 'Ivanov',
-  },
-  position: 'Junior Fullstack developer',
-  salary: {
-    text: 'Salary:',
-    sum: '600 $ в місяць',
-  },
-  address: 'Ukraine, Kyiv , 02152',
-}
-
-var footer = {
-  social: {
-    email: {
-      text: 'dmytro@mail.com',
-      href: 'mailto:dmytro@mail.com',
-    },
-
-    phone: {
-      text: '+380971111678',
-      href: 'tel: +380971111678',
-    },
-    linkedin: {
-      text: 'Linkedin',
-      href: 'https://www.linkedin.com/in/dmytro-test',
-    },
-  },
-}
 
 router.get('/', function (req, res) {
   res.render('index', {})
@@ -2179,6 +2146,7 @@ router.get('/task21', function (req, res) {
 
 router.get('/task22', function (req, res) {
   res.render('task22', {
+    layout: 'basic',
     page_header: {
       title: 'InnovaMind',
       description: 'Welcome to our wonderful community',
