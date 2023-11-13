@@ -6,7 +6,7 @@
 <a href="{{href}}"  class="btn btn-link">{{text}}</a>
 {{/each}}
 {{#with button}}
-<button class="btn btn-primary btn-sm"><a href="{{href}}">{{text}}</a></button>
+<a href="{{href}}" class="btn btn-primary btn-sm">{{text}}</a>
 {{/with}}
 <br>
 <hr>
@@ -20,7 +20,7 @@
 <p>{{description}}</p>
 {{#with button}}
 <div>
-<button class="btn btn-primary btn-sm"><a href="{{link}}" >{{text}}</a></button>
+ <a href="{{link}}" class="btn btn-primary btn-sm">{{text}}</a>
 </div>
 {{/with}}
 {{/with}}
@@ -30,9 +30,9 @@
    
 {{#with city}}
 <h2 >{{title}}</h2>
- <div class="row gx-1 gy-2">
+ <div class="row gx-2 gy-3">
+ {{#each cards}}   
 <div class="col-5">
-{{#each cards}}
 <div class="card">
     <div class="card-body">
     
@@ -48,11 +48,14 @@
 <a href={{href}} class="btn btn-primary">{{text}}</a>
 {{/with}}
 </div>
+
+</div>
 </div>
 {{/each}}
 </div>
-</div>
+
 {{/with}}
+
 <br>
 <hr>
 <br>
@@ -86,9 +89,11 @@
 <br>
 {{#with gallery}}
 <h2>{{title}}</h2>
-{{#each cards}}
 <div class="row">
-<div class="col-4">
+ 
+{{#each cards}}
+<div class="col-4">  
+
 <div class="card">
     <div class="card-header">{{name}}</div>
     {{#each items}}
@@ -96,10 +101,11 @@
             <li class="list-group-item">{{this}}</li>
         </ul>
     {{/each}}
- </div>   
-</div>
+ </div>    
 </div>
 {{/each}}
+</div>
+
 {{/with}}
 <br>
 <hr>
@@ -108,23 +114,26 @@
     {{#with relaxion}}
     <div class="display-3">{{title}}</div>
     <div class="row">
+      {{#each cards}}  
     <div class="col-3">
     <div class="card text-bg-secondary">
-    {{#each cards}}
+    
     <div class="card-header">{{header}}</div>
     <div class="card-title">{{title}}</div>
     <p>{{description}}</p>
+    
+    </div>
+    </div>
     {{/each}}
-    </div>
-    </div>
     </div>
     {{/with}}
     <br>
     <hr>
     <br>
     {{#with rest}}
-    {{#each cards}}
+    
     <div class="row gx-1">
+     {{#each cards}}   
     <div class="col-6">
     <div class="card">
         <div class="card-header text-center">{{header}}</div>
@@ -136,8 +145,8 @@
 <div class="card-footer text-center">{{footer}}</div>
     </div>
     </div>
-    </div>
     {{/each}}
+    </div>
     {{/with}}
     <br>
     <hr>
@@ -145,8 +154,9 @@
     {{#with proposition}}
     <div class="display-2">{{title}}</div>
     <br>
+    <div class="row gx-1"></div>
     {{#each card}}
-    <div class="row gx-1">
+    
     <div class="col-6">
     <div class="card text-bg-warning">
         <h3 class="card-header">{{header}}</h3>
@@ -155,39 +165,48 @@
         <p>{{description}}</p>
     </div>
     </div>
-    </div>
     {{/each}}
+    </div>
+    
     {{/with}}
     <br>
     <hr>
     <br>
     {{#with footer}}
     <h5>{{title}}</h5>
+    <div class="row"></div>
     {{#each navigation}}
-    <div class="row">
+    
     <div class="col-4">
     <ul class="list-group">
         <li ><a href="{{href}}"  class="btn btn-link">{{text}}</a></li>
     </ul>
     </div>
+     {{/each}}
     </div>
-    {{/each}}
-    {{#each socialMedia}}
+   
+    
     <div class="row">
-    <div class="col-4">
+      {{#each socialMedia}}  
+    <div class="col-2">
     <ul class="list-group">
-        <li ><a href={{link}}  class="btn btn-outline-dark" >{{text}}</a></li>
+        <a href={{link}}  class="btn btn-outline-dark" >{{text}}</a>
     </ul>
     </div>
-    </div>
     {{/each}}
-    {{#each partners}}
+    </div>
+    <br>
+    <hr>
+    <br>
+    
     <div class="row">
-    <div class="col-4">
+     {{#each partners}}   
+    <div class="col-2">
     <ul class="list-group">
-        <li ><a href={{link}}  class="btn btn-outline-info" >{{name}}</a></li>
+        <a href={{link}}  class="btn btn-outline-info" >{{name}}</a>
     </ul>
     </div>
+     {{/each}}
     </div>
-    {{/each}}
+   
     {{/with}}
