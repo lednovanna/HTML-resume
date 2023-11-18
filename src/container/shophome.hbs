@@ -56,21 +56,25 @@
 <hr class="my-5">
 {{#with subscribe}}
 <div class="card text-bg-secondary">
+    <div class="card-body">
     <h2 class="card-header">{{header}}</h2>
     <p class="card-body">{{description}}</p>
     {{#each buttons}}
-    <a href={{link}}  class="btn btn-primary mb-3">{{text}}</a>  
+   <p> <a href={{link}}  class="btn btn-primary mb-3">{{text}}</a></p>  
     {{/each}}
+   </div> 
 </div>
 {{/with}}
 
 <hr class="my-5">
 {{#with service}}
 <div class="card text-bg-success">
-    <h2 class="card-header text-center">{{title}}</h2>
+    <div class="card-body" > 
+     <h2 class="card-header text-center">{{title}}</h2>
     <p class="card-body">{{description}}</p>
     {{#each buttons}}
-    <a href={{link}}  class="btn btn-primary mb-3">{{text}}</a>  
+    <a href={{link}}  class="btn btn-primary mb-3">{{text}}</a> 
+     </div> 
     {{/each}}
 </div>
 {{/with}}
