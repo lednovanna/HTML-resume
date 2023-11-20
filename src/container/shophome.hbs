@@ -17,7 +17,10 @@
 <div class="card text-bg-secondary">
 <div class="card-body">
 <div class= "card "></div>
-<div class="card-title {{#if isTop}}top-news{{/if}} {{#if isNew}}new-news{{/if}}"> <strong>{{title}}<span class="badge text-bg-success rounded-pile ">New</span><span class="badge text-bg-danger rounded-pile">Top</span></strong></div>
+<div class="card-title "><strong>{{title}}</strong>
+{{#if isTop}}<span class="badge text-bg-success rounded-pile ">New</span>{{/if}}
+{{#if isNew}}<span class="badge text-bg-danger rounded-pile"> Top</span>{{/if}}
+</div>
 <div>{{description}}</div>
 </div>
 </div>
@@ -28,15 +31,19 @@
 <hr class="my-5">
 {{#with goodsBlock}}
 <div class="row g-3">
-{{#each tabs}}
+
 <div class="col-12">
 <div class="nav nav-tabs">
+    {{#each tabs}}
     <div class="nav-item">
-        <a href="#"  class="nav-link {{#if isActive}}active{{/if}} {{#if isDisabled}}disabled{{/if}}">{{text}}</a></div>
+        <a href="#"  class="nav-link {{#if isActive}}active{{/if}}
+         {{#if isDisabled}}disabled{{/if}}">{{text}}</a>
     </div>
+  {{/each}}  
 </div>
+
 </div>
-{{/each}}
+
 </div>
 <div class="row my-5 gy-3">
 {{#each cards}}
@@ -44,7 +51,9 @@
 <div class="card ">
     <div class="card-body ">
         <img class="card-img-top" src={{image}}>
-        <h6 class="card-title {{#if isHot}}hot{{/if}} {{#if isNew}}new{{/if}}">{{title}} <span class="badge text-bg-warning rounded-pile">Hot</span> <span class="badge text-bg-primary rounded-pile">New</span></h5>
+        <h6 class="card-title"> {{title}}</h6>
+            {{#if isHot}} <span class="badge text-bg-warning rounded-pile">Hot</span>{{/if}} 
+            {{#if isNew}}<span class="badge text-bg-primary rounded-pile">New</span> {{/if}} 
         <div>{{description}}</div>
         
     </div>
