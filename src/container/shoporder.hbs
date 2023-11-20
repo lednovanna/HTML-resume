@@ -1,0 +1,17 @@
+{{#with navigation}}
+
+{{#each links}}
+<div class="card">
+    <div class="nav">
+        <div class="nav-item">
+           {{#if href}}
+                <a href="{{href}}">{{text}}</a>
+            {{else}}
+                {{text}}
+            {{/if}}
+</div>
+</div>
+</div>
+{{/each}}
+{{/with}}
+<h1 class="my-4">{{header}}</h1>
