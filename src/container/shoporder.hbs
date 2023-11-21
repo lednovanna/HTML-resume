@@ -1,17 +1,84 @@
 {{#with navigation}}
 
-{{#each links}}
+
 <div class="card">
     <div class="nav">
+        {{#each links}}
         <div class="nav-item">
            {{#if href}}
-                <a href="{{href}}">{{text}}</a>
+                <a class="nav-link" href="{{href}}">{{text}}</a>
             {{else}}
                 {{text}}
             {{/if}}
 </div>
-</div>
-</div>
 {{/each}}
+</div>
+</div>
+
 {{/with}}
 <h1 class="my-4">{{header}}</h1>
+{{#with contacts_data}}
+<h2 class="mb-4">{{title}}</h2>
+{{#each buttons}}
+<button {{#if isPrimary}} class="btn btn-warning" {{/if}} 
+{{#if isOutline}} class="btn btn-outline-warning" {{/if}}
+>{{text}}</button>
+{{/each}}
+<div class="my-4"></div>
+{{#with form}}
+{{#with input}}
+{{#with surname}}
+
+<div class="row">
+    <div class="col-4">
+        
+        <label class="form-label">{{label}}</label>
+        <input class="form-control" type="text" placeholder="{{placeholder}} "> 
+        <div class="form-text text-danger">{{caption}}</div>
+    
+    </div>
+</div>
+{{/with}}
+{{#with name}}
+        <div class="row">
+         <div class="col-4">
+
+        <label class="form-label">{{label}}</label>
+        <input class="form-control" type="text" placeholder="{{placeholder}} ">
+        <div class="form-text text-danger">{{caption}}</div>
+    </div>
+    </div>
+    
+{{/with}}
+{{#with phone}}
+<div class="row">
+         <div class="col-4">
+
+        <label class="form-label">{{label}}</label>
+        <input class="form-control" type="text" placeholder="{{placeholder}} ">
+        <div class="form-text text-danger">{{caption}}</div>
+    </div>
+    </div>
+{{/with}}
+{{#with email}}
+<div class="row">
+         <div class="col-4">
+
+        <label class="form-label">{{label}}</label>
+        <input class="form-control" type="text" placeholder="{{placeholder}} ">
+        <div class="form-text text-danger">{{caption}}</div>
+    </div>
+    </div>
+{{/with}}
+{{/with}}
+<hr class="my-4">
+{{#each switch}}
+<div class="form-label" >
+<div class="form-check form-switch">
+    <label  class="form-check-label">{{text}}</label>
+    <input name="switch" type="checkbox" {{#if isActive}} class="form-check-input"{{/if}}>
+</div>
+</div> 
+{{/each}}
+{{/with}}
+{{/with}}
