@@ -14,8 +14,9 @@
 {{/each}}
 </div>
 </div>
-
 {{/with}}
+<div class="row">
+<div class="col-8">
 <h1 class="my-4">{{header}}</h1>
 {{#with contacts_data}}
 <h2 class="mb-4">{{title}}</h2>
@@ -82,9 +83,10 @@
 {{/each}}
 {{/with}}
 {{/with}}
-
+</div>
 
 <hr class="my-4 col-8">
+<div class="col-8">
 <div class="card col-4">
 {{#each action_block}}
 <div class="card-body">
@@ -97,7 +99,7 @@
 {{/each}}
 </div>
 {{#with total}}
-<div class="card col-4 mt-4">
+<div class="card col-4 mt-3">
 <div class="card-body">
 <h3  class="my-2">{{title}}</h3>
 {{#each item_list}}
@@ -120,6 +122,8 @@
 </div>
 </div>
 {{/with}}
+</div>
+</div>
 
 
 {{#with delivery}}
@@ -132,7 +136,7 @@
 <label class="form-label">{{label}}</label>
 <select class="form-select-sm">
     <option  selected>{{placeholder}}</option>
-    {{#each option}}
+    {{#each options}}
     
     <option value="{{value}}">{{text}}</option>
     {{/each}}
@@ -157,10 +161,12 @@
 <h3 class="my-2">{{title}}</h3>
 {{#each list}}
  <div class="col-8">
+    
     <div class="form-check">
+        <input name="delivery" type="radio" class="form-check-input">
         <label class="form-check-label">{{type}}</label>
         <div class="form-text">{{description}}</div>
-         <input name="delivery" type="radio" class="form-check-input">
+         
     </div>
  </div>
 {{/each}}
