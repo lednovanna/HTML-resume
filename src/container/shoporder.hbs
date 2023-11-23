@@ -8,7 +8,7 @@
            {{#if href}}
                 <a class="nav-link" href="{{href}}">{{text}}</a>
             {{else}}
-                {{text}}
+              <a class="nav-link disabled"  href="{{href}}">  {{text}}</a>
             {{/if}}
 </div>
 {{/each}}
@@ -83,11 +83,12 @@
 {{/each}}
 {{/with}}
 {{/with}}
-</div>
 
-<hr class="my-4 col-8">
-<div class="col-8">
-<div class="card col-4">
+<div class="col-8"></div>
+
+<hr class="my-4">
+
+<div class="card">
 {{#each action_block}}
 <div class="card-body">
 <button class="{{#if isSuccess}}success-button btn btn-danger{{/if}}
@@ -222,7 +223,7 @@
 <label class="form-label"><strong>{{label}}</strong></label>
         <input class="form-control" type="text" placeholder="{{placeholder}} "> 
 {{/with}}
-{{/with}}
+
 <hr class="my-4 col-8">
 {{#with coupon}}
 <h3 class="my-2">{{title}}</h3>
@@ -230,12 +231,23 @@
 {{#with avaliable_coupon}}
 <label class="form-label"><strong>{{label}}</strong></label>
 <select class="form-select">
-        <option  selected>{{placeholder}}</option>
+        <option  value="0 ">{{placeholder}}</option>
     {{#each options}}
     <option value="{{value}}">{{text}}</option>
     {{/each}}
-     </select>   
+     </select> 
+ {{/with}} 
+ {{#with friend_coupon}}
+   <label class="form-label"><strong>{{label}}</strong></label>
+<select class="form-select">
+        <option  value="0 ">{{placeholder}}</option>
+    {{#each options}}
+    <option value="{{value}}">{{text}}</option>
+    {{/each}}
+     </select> 
+ {{/with}}   
 {{/with}}
+
 {{/with}}
 {{#with add}}
 {{#with friend}}
@@ -256,15 +268,14 @@
 {{#with preference}}
 <h5 class="my-2">{{title}}</h5>
 
-<div class="form-check">
+<input type="radio" class="form-check-input">
+<label class="form-check-label">
     
-    <label class="form-check-label"> 
        {{#each options}} 
-       <div>{{this}}</div> 
-    </label>
-    <input type="radio" class="form-check-input">
+   <div>{{this}}</div>  
     {{/each}}
-</div>
+    
+</label>
 {{/with}}
 {{#with your_expirience}}
 <div class="my-2">
