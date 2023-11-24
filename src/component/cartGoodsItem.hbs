@@ -1,0 +1,38 @@
+{{#with header}}
+<h1 class="mt-4">{{title}}</h1>
+{{#with button}}
+<a class="btn btn-outline-dark" href="{{link}}">{{text}}</a>
+{{/with}}
+{{/with}}
+<hr class="my-5">
+{{#each goodsBlock}}
+<div class="card my-3">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-2">
+            <img src="{{image}}" width="" alt="product">
+            </div>
+        
+         <div class="col-5">
+           <h6>{{name}}</h6> 
+           <p>{{description}}</p>
+        </div> 
+        <div class="col-2">
+            {{#with price}}
+           <div> {{title}}</div>
+           <p><strong>{{value}}</strong></p> 
+            {{/with}}
+        </div>
+        <div class="col-1">
+         <p>{{amount}}</p>
+        </div>
+        <div class="col-2 ">
+        {{#each buttons}}
+         {{#if isPrimary}}<button class="btn btn-primary mb-2">{{text}}</button>{{/if}}
+         {{#if isDanger}}<button class="btn btn-outline-danger">{{text}}</button>{{/if}}
+        {{/each}}
+        </div>
+        </div>
+    </div>
+</div>
+{{/each}}
