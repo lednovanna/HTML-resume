@@ -35,7 +35,9 @@
 {{/each}}
 </div>
 <div class="row">
+    
         <div class="col-4">
+            
 <div class="card my-4">
     <div class="card-body">
         
@@ -93,10 +95,16 @@
         {{/with}} 
         </div>
         </div>
-         </div> 
-         <div class="col-4">   
+         </div>
+          
+          
+         
+        <div class="col-8">  
+           <div class="row"> 
         {{#each goodsList}}
+
         
+          <div class="col-6">      
         <div class="card my-4">
          <img class="card-img-top" src="{{img}}" alt="product">
          <div class="card-body">
@@ -123,9 +131,11 @@
             </ul>
           </div> 
           </div>
-         
+          </div> 
+           
         {{/each}}
-    </div>          
+        </div>
+       </div>     
 </div>
 {{#with service}}
 <div class="card text-bg-success">
