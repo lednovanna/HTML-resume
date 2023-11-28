@@ -1,0 +1,116 @@
+{{#with navigation}}
+<div class="card">
+<div class="nav">
+{{#each links}}
+
+<div class="nav-item">
+           
+ <a class="nav-link" href="{{href}}">{{text}}</a>
+         </div>
+{{/each}}
+</div>
+</div>
+{{/with}}
+{{#with header}}
+<h1 class="mt-4">{{title}}</h1>
+{{#with button}}
+<a class="btn btn-outline-dark" href="{{link}}">{{text}}</a>
+{{/with}}
+{{/with}}
+<hr class="my-5">
+{{#each goodsBlock}}
+<div class="card my-3">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-2">
+            <img src="{{image}}" width="" alt="product">
+            </div>
+        
+         <div class="col-5">
+           <h6>{{name}}</h6> 
+           <p>{{description}}</p>
+        </div> 
+        <div class="col-2">
+            {{#with price}}
+           <div> {{title}}</div>
+           <p><strong>{{value}}</strong></p> 
+            {{/with}}
+        </div>
+        <div class="col-1">
+         <p>{{amount}}</p>
+        </div>
+        <div class="col-2 ">
+        {{#each buttons}}
+         {{#if isPrimary}}<button class="btn btn-primary mb-2">{{text}}</button>{{/if}}
+         {{#if isDanger}}<button class="btn btn-outline-danger">{{text}}</button>{{/if}}
+        {{/each}}
+        </div>
+        </div>
+    </div>
+</div>
+{{/each}}
+<hr class="my-5">
+{{#with total}}
+<h3>{{title}}</h3>
+<p><h2>{{amount}}</h2></p>
+<div>{{delivery}}</div>
+{{#each buttons}}
+<div>
+{{#if isSuccess}}<a class="btn btn-success my-3" href="{{link}}">{{text}}</a>{{/if}}
+</div>
+<div>
+{{#if isOutline}}<a class="btn btn-outline-success" href="{{link}}">{{text}}</a>{{/if}}
+</div>
+{{/each}}
+{{/with}}
+<hr class="my-5">
+{{#with goodsOtherBlock}}
+<h3 class="my-4">{{title}}</h3>
+<div class="row">
+    
+{{#each cards}}
+<div class="col-4">
+<div class="card mb-2">
+<img class="card-img-top" src="{{image}}" width="100" alt="product">
+<div class="card-body">
+
+<h5 class="card-title">{{title}}</h5>
+{{#if isHot}}<span class="badge text-bg-warning">Hot</span>{{/if}}
+{{#if isNew}}<span class="badge text-bg-primary">New</span>{{/if}}
+<div>{{description}}</div>
+</div>
+</div>
+</div>
+{{/each}}
+</div>
+{{/with}}
+<hr class="my-5">
+{{#with subscribe}}
+<div class="card text-bg-dark">
+    <div class="card-body">
+        <h2 class="card-header">{{header}}</h2>
+        <p>{{description}}</p>
+        {{#each buttons}}
+        <div class="my-3">
+        <a class="btn btn-primary " href="{{link}}">{{text}}</a>
+        </div>
+        {{/each}}
+    </div>
+</div>
+{{/with}}
+<hr class="my-5">
+<div class="row">
+{{#each footer}}
+ <div class="col-2">
+{{#each this}}
+
+    <ul class="list-group">
+        
+        <a href={{link}}  class="btn btn-link" >{{text}}</a>
+        
+    </ul>
+    
+{{/each}}
+</div>
+{{/each}}
+</div>
