@@ -8,7 +8,7 @@
             {{#each work}}
             <li>
                 <div>{{position}}</div>
-                <br>
+                
                 <div>
                     {{duration.from}} -
                      {{#if duration.to}}
@@ -18,9 +18,10 @@
                      {{/if}}
                         </div>
               
-                <br>
+                
 
-               <div>
+               <div class="my-4">
+                
                 {{#if company.url}}
                  {{> link text=company.name href=company.url blank=true noLine=true }}
                {{else}}
@@ -28,24 +29,25 @@
                 {{/if}}
                 </div>
                <br>
-               <br>
+              
                
                
-               <br>
+                
                <ul>
                 {{#each projects}}
-                
+                <br>
                 <div>
                 <strong> Projects({{projectAmount}})</strong>
                 
                 </div>
-                <br>
+                
                 <li>
                     <div>{{> link text=name href=url blank=true noLine=true}}</div>
                  <br>
                  <div>
-                    <p>{{about}}</p>
+                    <p><strong>{{about}}</strong></p>
                  </div>
+                
                 <br>
                 <div><em>Stacks ({{stackAmount}})</em></div>
                 <br>
@@ -67,8 +69,8 @@
                     </ul>
                   </div>
                 </li>
-                 <br>
-                 <div><strong>Stack amount ({{stackAmount}})</strong></div>
+                 
+                 <div class="my-4"><strong>Stack amount ({{stackAmount}})</strong></div>
                <div><strong>Awards amount ({{awardAmount}})</strong></div>
                {{/each}} 
             </ul>

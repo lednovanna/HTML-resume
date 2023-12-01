@@ -34,7 +34,32 @@ var footer = {
 }
 
 router.get('/', function (req, res) {
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+
+    name: 'Анна Ледньова',
+    project: 'Проект резюме',
+    description: 'Опис проекта',
+
+    buttons: [
+      {
+        text: 'summary',
+        link: 'http://localhost:3000/skills',
+      },
+      {
+        text: 'education',
+        link: 'http://localhost:3000/education',
+      },
+      {
+        text: 'skills',
+        link: 'http://localhost:3000/skills',
+      },
+      {
+        text: 'work',
+        link: 'http://localhost:3000/work',
+      },
+    ],
+  })
 })
 
 router.get('/summary', function (req, res) {
@@ -2198,7 +2223,6 @@ router.get('/task22', function (req, res) {
   })
 })
 
-
 // ================================================================
 router.get('/task31', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -3131,7 +3155,6 @@ router.get('/shopcart', function (req, res) {
       ],
     },
 
-
     header: {
       title: 'Кошик',
       button: {
@@ -3256,178 +3279,6 @@ router.get('/shopcart', function (req, res) {
           link: 'https://www.youtube.com/',
         },
       ],
-
-    header: 'Мої замовлення',
-
-    purchase: {
-      tabs: ['Всі замовлення', 'Гарантія та повернення'],
-      actionBlock: {
-        input: { placeholder: 'Placeholder' },
-        buttons: [
-          {
-            text: 'Знайти',
-            link: 'https://www.youtube.com/',
-            isSuccess: true,
-          },
-          {
-            text: 'Виділити все',
-            link: 'https://www.youtube.com/',
-            isOutline: true,
-          },
-          {
-            text: 'Очистити все',
-            link: 'https://www.youtube.com/',
-            isDanger: true,
-          },
-        ],
-      },
-      itemList: [
-        {
-          number: '№12587463 від 01.01.2023',
-          status: 'Виконано',
-          amount: { title: 'Сума', value: '25 000 ₴' },
-          images: ['https://picsum.photos/110/100'],
-          button: {
-            text: 'Детальніше',
-            link: 'https://www.youtube.com/',
-            isPrimary: true,
-          },
-        },
-        {
-          number: '№12587463 від 01.01.2023',
-          status: 'Виконано',
-          amount: { title: 'Сума', value: '25 000 ₴' },
-          images: [
-            'https://picsum.photos/110/100',
-            'https://picsum.photos/110/100',
-            'https://picsum.photos/110/100',
-          ],
-          button: {
-            text: 'Детальніше',
-            link: 'https://www.youtube.com/',
-            isPrimary: true,
-          },
-        },
-        {
-          number: '№12587463 від 01.01.2023',
-          status: 'Виконано',
-          amount: { title: 'Сума', value: '25 000 ₴' },
-          images: [
-            'https://picsum.photos/110/100',
-            'https://picsum.photos/110/100',
-          ],
-          button: {
-            text: 'Детальніше',
-            link: 'https://www.youtube.com/',
-            isPrimary: true,
-          },
-        },
-      ],
-    },
-    userInfo: {
-      title: 'Особиста інформація',
-      profileData: {
-        title: 'Особисті дані',
-        fullName: {
-          surname: {
-            title: 'Прізвище',
-            value: 'Іванов',
-          },
-          name: {
-            title: 'Ім’я',
-            value: 'Іван',
-          },
-          middleName: {
-            title: 'По-батькові',
-            value: 'Іванович',
-          },
-        },
-        otherInfo: {
-          birthday: {
-            title: 'Дата народження',
-            value: '01.01.2000',
-          },
-          sex: {
-            title: 'Стать',
-            value: 'Чоловіча',
-          },
-          language: {
-            title: 'Мова',
-            value: 'Українська',
-          },
-        },
-      },
-      buttons: [
-        {
-          text: 'Редагувати',
-          link: 'https://www.youtube.com/',
-          isPrimary: true,
-        },
-        {
-          text: 'Очистити',
-          link: 'https://www.youtube.com/',
-          isSecondary: true,
-        },
-        {
-          text: 'Видалити',
-          link: 'https://www.youtube.com/',
-          isDanger: true,
-        },
-      ],
-      recipients: {
-        title: 'Отримувачі',
-        users: [
-          {
-            name: 'Іванов Іван Іванович',
-            phone: '+38 (098) 222 22 22',
-            button: {
-              text: 'Редагувати',
-              link: 'https://www.youtube.com/',
-            },
-          },
-          {
-            name: 'Петров Петро Петрович',
-            phone: '+38 (098) 111 11 11',
-            button: {
-              text: 'Редагувати',
-              link: 'https://www.youtube.com/',
-            },
-          },
-        ],
-      },
-      contacts: {
-        title: 'Контакти',
-        contactData: [
-          {
-            title: 'Номер телефону',
-            value: '+38 (098) 222 22 22',
-            button: {
-              text: 'Редагувати',
-              link: 'https://www.youtube.com/',
-              isPrimary: true,
-            },
-          },
-          {
-            title: 'Додатковий номер телефону',
-            value: '+38 (098) 111 11 11',
-            button: {
-              text: 'Очистити',
-              link: 'https://www.youtube.com/',
-              isSecondary: true,
-            },
-          },
-          {
-            title: 'Електронна адреса',
-            value: 'ivanivanov@ukr.net',
-            button: {
-              text: 'Видалити',
-              link: 'https://www.youtube.com/',
-              isDanger: true,
-            },
-          },
-        ],
-      },
-
     },
 
     footer: [
@@ -3525,15 +3376,13 @@ router.get('/shopcart', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 // ================================================================
-//           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shopcatalog', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopcatalog', {
-    layout: 'shop',
+    // layout: 'shop',
     navigation: {
       links: [
         {
@@ -4187,5 +4036,6 @@ router.get('/shopreview', function (req, res) {
 })
 
 // ================================================================
+
 // Підключаємо роутер до бек-енду
 module.exports = router
